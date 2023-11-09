@@ -1,0 +1,73 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+li { list-style: none; }
+a { text-decoration: none; 
+    color: #2F3438; 
+    display: block; 
+    white-space: nowrap; /*텍스트 줄바꿈 방지*/ 
+    /* font-family: 'Noto Sans KR', sans-serif;  */
+}
+img { width: 100%; }
+nav {
+    margin: 0 auto;
+    width: 1920px;
+    height: 100px;
+    background-color: #FFFFFFBF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav > ul {
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    width: 1000px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+nav > ul > li {
+    /* background-color: aqua; */
+    width: 150px;
+}
+nav > ul > li > a {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 60px;
+    margin: 20px 0 60px 0;
+}
+nav > ul > li > .sub {
+    display: none;
+    background-color: #FFFFFFBF;
+    /* 주메뉴보다 서브메뉴의 길이가 길 때 */
+    position: absolute;
+}
+nav > ul > li > .sub ul li {
+    margin-bottom: 30px;
+}
+nav > ul > li >.sub ul li a {
+    font-size: 18px;
+    font-weight: bold;
+}
+nav > ul > li:hover > a {
+    color: #F15E0A;
+}
+nav > ul > li > a {
+    position: relative;
+    display: inline-block;
+}
+nav > ul > li > a:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: #F15E0A;
+    left: 50%;
+    bottom: -20px;
+    transition: all 0.3s;
+}
+nav > ul > li:hover > a:after {
+    left: 0;
+    width: 100%;
+}
+nav > ul > li .sub ul li:hover a {
+    color: #F15E0A;
+}
